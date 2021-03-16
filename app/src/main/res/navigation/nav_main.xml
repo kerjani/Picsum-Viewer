@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/imageListFragment">
+
+    <fragment
+        android:id="@+id/imageListFragment"
+        android:name="com.picsum.viewer.ui.list.ItemListFragment"
+        android:label="fragment_image_list"
+        tools:layout="@layout/fragment_image_list" />
+
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.picsum.viewer.ui.detail.ItemDetailFragment"
+        android:label="ItemDetailFragment">
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+</navigation>
