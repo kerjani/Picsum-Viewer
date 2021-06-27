@@ -1,16 +1,18 @@
 package com.picsum.viewer.ui.detail
 
 import android.util.Log
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.picsum.viewer.data.models.ImageInfo
 import com.picsum.viewer.data.source.repository.PicsumRepository
 import com.picsum.viewer.util.Result
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class ItemDetailViewModel @ViewModelInject constructor(
+@HiltViewModel
+class ItemDetailViewModel @Inject constructor(
     val repository: PicsumRepository
 ) : ViewModel() {
 
